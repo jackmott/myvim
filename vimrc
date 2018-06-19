@@ -1,3 +1,11 @@
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
+let g:lsp_signs_enabled = 1
 filetype plugin indent on
 syntax on
 colorscheme noir
