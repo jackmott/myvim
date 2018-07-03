@@ -17,6 +17,10 @@ set number
 set hlsearch incsearch
 set nowrap
 cabbr ex Explore
+set clipboard=unnamedplus
+nnoremap Cntrl-d "_d
+xnoremap Cntrl-d "_d
+xnoremap p "_dP
 inoremap <silent> <c-s> <Esc>:update<CR>
 nnoremap <silent> <c-s> :update<CR>
 inoremap <silent> <c-s> <Esc>:update<CR>
