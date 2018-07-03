@@ -6,6 +6,7 @@ if executable('rls')
         \ })
 endif
 let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
 filetype plugin indent on
 syntax on
 colorscheme noir
@@ -27,5 +28,4 @@ inoremap <silent> <c-s> <Esc>:update<CR>
 nnoremap <silent> <c-s> :update<CR>
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
-set statusline+=%F
 
