@@ -1,22 +1,30 @@
-
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_async_completion = 1
+function! Bench()
+        update
+        !cargo bench
+endfunction
 function! Check()
         update
         !cargo check
 endfunction
+function! Test()
+        update
+        !cargo test
+endfunction
 function! Format()
-        !rustfmt % 
+        update
+        silent !rustfmt % 
         redraw!
 endfunction
-" if executable('rls')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'rls',
-"        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-"        \ 'whitelist': ['rust'],
-"        \ })
-"endif
-let g:lsp_signs_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_async_completion = 0
 filetype plugin indent on
 syntax on
 colorscheme noir
@@ -31,8 +39,8 @@ cabbr ex Explore
 set clipboard=unnamedplus
 nnoremap x "_x
 xnoremap x "_x
-nnoremap Cntrl-d "_d
-xnoremap Cntrl-d "_d
+nnoremap <c-d> "_d
+xnoremap <c-d> "_d
 xnoremap p "_dP
 inoremap <silent> <c-s> <Esc>:update<CR>
 nnoremap <silent> <c-s> :update<CR>
