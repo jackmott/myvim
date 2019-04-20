@@ -1,10 +1,10 @@
-if executable('rls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'rls',
-        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-        \ 'whitelist': ['rust'],
-        \ })
-endif
+"if executable('rls')
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'rls',
+"        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+"        \ 'whitelist': ['rust'],
+"        \ })
+"endif
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_async_completion = 1
@@ -29,6 +29,7 @@ filetype plugin indent on
 syntax on
 colorscheme noir
 let g:rainbow_active = 1
+autocmd InsertEnter,InsertLeave * set cul!
 set mouse=a
 set autoread
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -37,6 +38,9 @@ set hlsearch incsearch
 set nowrap
 cabbr ex Explore
 set clipboard=unnamedplus
+vmap y ygv<Esc>
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 nnoremap x "_x
 xnoremap x "_x
 nnoremap <c-d> "_d

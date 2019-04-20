@@ -25,8 +25,8 @@ if has("gui_running") || &t_Co == 256
     hi Keyword cterm=NONE ctermfg=250 ctermbg=0 gui=NONE guifg=#eeeeee guibg=#000000
     hi Function cterm=NONE ctermfg=33 ctermbg=0 gui=NONE guifg=#eeeeee guibg=#000000
     hi Constant cterm=NONE ctermfg=252 ctermbg=0 gui=NONE guifg=#d0d0d0 guibg=#000000
-    hi String cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#8a8a8a guibg=#000000
-    hi Comment cterm=NONE ctermfg=10 ctermbg=0 gui=NONE guifg=#585858 guibg=#000000
+    hi String cterm=NONE ctermfg=10 ctermbg=0 gui=NONE guifg=#8a8a8a guibg=#000000
+    hi Comment cterm=NONE ctermfg=8 ctermbg=0 gui=NONE guifg=#585858 guibg=#000000
     hi LineNr cterm=NONE ctermfg=8 ctermbg=233 gui=NONE guifg=#585858 guibg=#000000
     hi Number cterm=NONE ctermfg=13 ctermbg=0 gui=NONE guifg=#ff0000 guibg=#000000
     hi Error cterm=NONE ctermfg=255 ctermbg=88 gui=NONE guifg=#eeeeee guibg=#870000
