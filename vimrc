@@ -1,10 +1,12 @@
-"if executable('rls')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'rls',
-"        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-"        \ 'whitelist': ['rust'],
-"        \ })
-"endif
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_async_completion = 1

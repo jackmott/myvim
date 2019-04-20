@@ -1,0 +1,27 @@
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
+colorscheme noir
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 
+set number
+set hlsearch incsearch
+set nowrap
+cabbr ex Explore
+nnoremap x "_x
+xnoremap x "_x
+nnoremap <c-d> "_d
+xnoremap <c-d> "_d
+xnoremap p "_dP
+inoremap <C-S> <Esc>:w<CR>
+nnoremap <C-S> :w<CR>
+inoremap <C-S> <Esc>:w<CR>
+nnoremap <C-S> :w<CR>
+nnoremap [b :bprevious<CR>
+nnoremap ]b :bnext<CR>
+
